@@ -1,15 +1,8 @@
-<form (submit)="submitInput()" class="example-form">
-  <mat-form-field class="example-full-width">
-    <mat-label for="valueInput">Inputfield</mat-label>
+<form>
+  <label for="firstName">Inputfield</label>
 
-    <input
-      id="valueInput"
-      type="text"
-      matInput
-      placeholder="placeholder"
-      value="Sushi"
-    />
-  </mat-form-field>
+  <input id="firstName" type="text" [formControl]="firstName" />
 
-  <button type="button" mat-raised-button color="primary">click</button>
+  <button type="button" (click)="submitApplication()">click</button>
 </form>
+<p>{{ firstName.value }}</p>
